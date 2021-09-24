@@ -1,6 +1,5 @@
 package com.github.template
 
-
 class Main
 
 fun main() {
