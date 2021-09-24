@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm")
     `maven-publish`
+    id("org.jlleitschuh.gradle.ktlint")
 }
 java.sourceCompatibility = JavaVersion.VERSION_11
 
@@ -17,8 +18,8 @@ java {
 dependencies {
     implementation(kotlin("reflect"))
     implementation(kotlin("stdlib"))
-    testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
-    testImplementation("org.junit.platform:junit-platform-launcher:1.6.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.0")
+    testImplementation("org.junit.platform:junit-platform-launcher:1.8.0")
 }
 
 tasks.test {
@@ -49,6 +50,3 @@ publishing {
         mavenLocal()
     }
 }
-
-
-
